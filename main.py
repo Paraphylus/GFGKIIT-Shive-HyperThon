@@ -10,7 +10,7 @@ def query(filename):
     response = requests.post(API_URL, headers=headers, data=data)
     return response.json()
 
-output = query("download.jpg")
+output = query("apple_fruit_powder3.jpg")
 food = output[0]['label']
 for i in range(len(allergy_foods)):
     if food.lower() == allergy_foods[i].lower():
